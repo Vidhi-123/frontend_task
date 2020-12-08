@@ -1,0 +1,20 @@
+<mat-card class="example-card" style="height: 400px;">
+
+    <mat-card-header>
+      <img *ngIf="data.title.length>0"  style="margin-left: 25%;" src="https://ui-avatars.com/api/?name={{data.title}}">
+      
+      
+     
+    </mat-card-header>
+    
+    <mat-card-content>
+        <mat-card-title *ngIf="data.title.length>0">{{data.title}}</mat-card-title>
+      <p *ngIf="data.description.length>0">
+      {{data.description}}
+       
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+     <p *ngIf="data.genres.length>0">Genres : {{data.genres}}</p>
+    </mat-card-actions>
+  </mat-card>

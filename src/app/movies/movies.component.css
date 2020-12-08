@@ -1,0 +1,50 @@
+.example-card {
+    max-width: 400px;
+    margin-left: 50px;
+    height: 250px;
+  }
+  
+  div{
+      display:inline;
+  }
+
+  .example-header-image {
+    
+    height: 75px;
+    width:75px;
+    position: relative;
+    margin-top:-40px;
+    margin-left: 150px;
+    background-size: cover;
+  }
+
+
+  @media only screen and (max-width: 990px) {
+    .example-card {
+        max-width: 95%;
+        height: 250px;
+      }
+
+      .example-header-image {
+    
+        height: 75px;
+        width:75px;
+        position: relative;
+        margin-top:-40px;
+        margin-left: 35%;
+        background-size: cover;
+      }
+    
+
+  }
+  
+
+
+
+
+
+
+
+
+
+  

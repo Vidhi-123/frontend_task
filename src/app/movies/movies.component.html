@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+    <img height="40px" style="margin-top: -15px;" src="https://ui-avatars.com/api/?name={{username}}"><h1 style="display: inline;">Welcome {{username}}</h1>
+    <br>
+    <br>
+    <button mat-raised-button color="primary"  *ngIf="arr.length==0" (click)="onRefresh()">Refresh</button>
+    
+    
+        <div class="container">
+            <div class="row">
+                
+    <div *ngFor="let items of arr">
+        <div class="col-md-4">
+<mat-card class="example-card" (click)="openDialog(items)">
+
+    <mat-card-header>
+      <img mat-card-avatar class="example-header-image" src="https://ui-avatars.com/api/?name={{items.title}}/?rounded=true">
+      
+      
+     
+    </mat-card-header>
+    
+    <mat-card-content>
+        <mat-card-title>{{items.title}}</mat-card-title>
+      <p>
+      {{items.description.substr(0,100)}}...
+       
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+     <p *ngIf="items.genres.length>0">Genres : {{items.genres}}</p>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+  <br>
+  <br>
+  </div>
+  
+  </div>
+  
+  </div>
+  
+  </div>
+  
+<button mat-raised-button color="primary" type="button" *ngIf="arr.length>0" (click)="onViewMore()">View More</button>
+</body>
+</html>
